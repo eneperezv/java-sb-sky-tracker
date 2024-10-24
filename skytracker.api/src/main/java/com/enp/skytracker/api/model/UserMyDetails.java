@@ -8,8 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.enp.melodyflow.api.model.User;
-import com.enp.melodyflow.api.repository.UserRepository;
+import com.enp.skytracker.api.repository.UserRepository;
 
 @Service
 public class UserMyDetails implements UserDetailsService {

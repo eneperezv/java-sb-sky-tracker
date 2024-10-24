@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.enp.skytracker.api.dto.UserDto;
+import com.enp.skytracker.api.model.ErrorDetails;
+import com.enp.skytracker.api.model.ResponseDetails;
+import com.enp.skytracker.api.service.UserService;
+
 @RestController
 @RequestMapping("/api/v1/skytracker/users")
 public class UserController {
