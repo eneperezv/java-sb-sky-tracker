@@ -1,5 +1,10 @@
 package com.enp.skytracker.api.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
 /*
  * @(#)OpenWeatherApiConfig.java 1.0 23/10/2024
  * 
@@ -15,6 +20,19 @@ package com.enp.skytracker.api.config;
  * @since 1.0
  */
 
+@Configuration
 public class OpenWeatherApiConfig {
+	
+	@Value("${00a5223ad0ad0a85f4226708aba4571b}")
+    private String apiKey;
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    public String getWeatherApiUrl(String cityName) {
+        return "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
+    }
 
 }
