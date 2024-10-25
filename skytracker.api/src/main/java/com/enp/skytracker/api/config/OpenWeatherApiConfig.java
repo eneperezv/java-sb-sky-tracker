@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class OpenWeatherApiConfig {
 	
-	@Value("${00a5223ad0ad0a85f4226708aba4571b}")
+	@Value("${openweather.api.key}")
     private String apiKey;
 
     @Bean
@@ -32,7 +32,7 @@ public class OpenWeatherApiConfig {
     }
 
     public String getWeatherApiUrl(String cityName) {
-        return "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
+        return "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=" + apiKey;
     }
 
 }

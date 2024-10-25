@@ -63,8 +63,9 @@ public class WebSecurityConfig {
                     registry.requestMatchers(HttpMethod.GET,  "/api/v1/skytracker/users/**").hasRole("USER");
                     registry.requestMatchers(HttpMethod.POST, "/api/v1/skytracker/users/register").hasRole("USER");
                     registry.requestMatchers(HttpMethod.PUT,  "/api/v1/skytracker/users/**").hasRole("USER");
+                    //WEATHER
+                    registry.requestMatchers(HttpMethod.POST, "/api/v1/skytracker/weather/forecast/**").hasRole("USER");
                     /*
-                    //USER
                     registry.requestMatchers(HttpMethod.GET,  "/api/v1/reservite/user/**").hasRole("USER");
                     registry.requestMatchers(HttpMethod.POST, "/api/v1/reservite/user").hasRole("USER");
                     registry.requestMatchers(HttpMethod.PUT,  "/api/v1/reservite/user").hasRole("USER");
