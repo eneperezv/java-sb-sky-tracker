@@ -7,6 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.enp.skytracker.api.config.OpenWeatherApiConfig;
 import com.enp.skytracker.api.model.WeatherData;
+import com.enp.skytracker.api.model.data.Root;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -34,7 +35,7 @@ public class WeatherService {
     @Autowired
     private OpenWeatherApiConfig apiConfig;
 
-    public WeatherData fetchWeatherData(String cityName) {
+    public Root fetchWeatherData(String cityName) {
         String url = apiConfig.getWeatherApiUrl(cityName);
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         
@@ -42,12 +43,12 @@ public class WeatherService {
         return parseWeatherResponse(response.getBody());
     }
 
-    private WeatherData parseWeatherResponse(String response) {
+    private Root parseWeatherResponse(String response) {
         // Convertir JSON a WeatherData
         ObjectMapper mapper = new ObjectMapper();
-        WeatherData weatherData = null;
+        Root weatherData = null;
 		try {
-			weatherData = mapper.readValue(response, WeatherData.class);
+			weatherData = mapper.readValue(response, Root.class);
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
