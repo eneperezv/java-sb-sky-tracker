@@ -1,16 +1,5 @@
 package com.enp.skytracker.api.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
-import com.enp.skytracker.api.config.OpenWeatherApiConfig;
-import com.enp.skytracker.api.model.WeatherData;
-import com.enp.skytracker.api.model.data.Root;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 /*
  * @(#)WeatherService.java 1.0 23/10/2024
  * 
@@ -25,6 +14,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @version 1.0
  * @since 1.0
  */
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.enp.skytracker.api.config.OpenWeatherApiConfig;
+import com.enp.skytracker.api.model.data.Root;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class WeatherService {

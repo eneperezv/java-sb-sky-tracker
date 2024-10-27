@@ -1,10 +1,5 @@
 package com.enp.skytracker.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 /*
  * @(#)Location.java 1.0 23/10/2024
  * 
@@ -19,6 +14,11 @@ import jakarta.persistence.Id;
  * @version 1.0
  * @since 1.0
  */
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Location {
