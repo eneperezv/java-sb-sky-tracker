@@ -1,10 +1,5 @@
 package com.enp.skytracker.api.config;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
-
 /*
  * @(#)OpenWeatherApiConfig.java 1.0 23/10/2024
  * 
@@ -19,6 +14,11 @@ import org.springframework.web.client.RestTemplate;
  * @version 1.0
  * @since 1.0
  */
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class OpenWeatherApiConfig {
